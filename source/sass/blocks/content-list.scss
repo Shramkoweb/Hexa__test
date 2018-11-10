@@ -28,6 +28,8 @@
   background-repeat: no-repeat;
   background-size: 100% 88px;
 
+  animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
   @media (min-width: $bp-tablet) {
     flex-grow: 1;
   }
@@ -71,5 +73,29 @@
 
   @media (min-width: $bp-tablet) {
     max-width: 213px;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    background-image: none;
+    background-size: 0;
+  }
+
+  25% {
+    background-image: none;
+    background-size: 25% 88px;
+  }
+
+  50% {
+    background-size: 50% 88px;
+  }
+
+  75% {
+    background-size: 75% 88px;
+  }
+
+  100% {
+    background-size: 100% 88px;
   }
 }
