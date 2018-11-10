@@ -1,0 +1,31 @@
+.content-list {
+  @include list-reset;
+}
+
+.content-list__title {
+  max-width: 155px;
+  margin: 0;
+  margin-bottom: 23px;
+
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 29px;
+  font-family: "Roboto-Black", "Arial", sans-serif;
+  color: #262423;
+}
+
+
+.content-list__item {
+  margin-bottom: 85px;
+
+  background: linear-gradient(red, transparent 1px, transparent 28px, red, transparent 29px, transparent 56px, red, transparent 57px, transparent 87px, red, transparent 88px);
+
+  &:first-child {
+    margin-bottom: 75px;
+  }
+}
+
+.content-list__text {
+  max-width: 255px;
+  margin: 0;
+}

@@ -1,0 +1,31 @@
+.content {
+  padding-top: 304px;
+
+  background-image: url("../img/moon-desktop.png");
+  background-repeat: no-repeat;
+  background-position: 12px 48px;
+  background-size: 285px 218px;
+}
+
+.content__title {
+  margin: 0;
+  margin-bottom: 37px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  color: #d0ca9e;
+  letter-spacing: 0.54px;
+}
+
+.content-list__item {
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &:first-child .content-list__title {
+    max-width: 170px;
+    margin-bottom: 52px;
+  }
+}
