@@ -1,0 +1,29 @@
+.logo__text {
+  margin: 0;
+  padding-top: 28px;
+  padding-bottom: 25px;
+  padding-left: 55px;
+
+  font-size: 18px;
+  line-height: 14px;
+  color: #010101;
+  text-transform: capitalize;
+  letter-spacing: -0.72px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 4px;
+
+    width: 39px;
+    height: 39px;
+
+    background-color: #292929;
+    border-radius: 50%;
+  }
+}
+
+.logo {
+  position: relative;
+}
