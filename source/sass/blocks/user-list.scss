@@ -7,10 +7,16 @@
   font-size: 15px;
   line-height: 20px;
   color: #000000;
+
+  @media (min-width: $bp-tablet) {
+    margin: 0;
+    margin-left: auto;
+  }
 }
 
 .user-list__link {
   position: relative;
+
   display: block;
   max-width: 100px;
   margin-left: 5px;
@@ -20,6 +26,10 @@
   padding-left: 40px;
 
   border: 1px solid #707070;
+
+  @media (min-width: $bp-tablet) {
+    margin-top: 25px;
+  }
 }
 
 .user-list__item {

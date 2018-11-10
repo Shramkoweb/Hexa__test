@@ -1,3 +1,7 @@
 .main-navigation {
   position: relative;
+
+  @media (min-width: $bp-tablet) {
+    display: flex;
+  }
 }
