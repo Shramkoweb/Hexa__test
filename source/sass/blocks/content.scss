@@ -10,7 +10,11 @@
     padding-top: 145px;
 
     background-position: -6px 149px;
-    background-size: 403px 309px;;
+    background-size: 403px 309px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    background-position: 190px 149px;
   }
 }
 
@@ -27,10 +31,14 @@
   letter-spacing: 0.54px;
 
   @media (min-width: $bp-tablet) {
-    padding-left: 452px;
+    padding-left: 33.5%;
 
     font-size: 62px;
     line-height: 69.5px;
     letter-spacing: 1px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    padding-left: 36.7%;
   }
 }

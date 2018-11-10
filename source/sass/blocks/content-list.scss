@@ -41,7 +41,11 @@
     margin-bottom: 75px;
 
     @media (min-width: $bp-tablet) {
-      padding-left: 458px;
+      padding-left: 33.5%;
+    }
+
+    @media (min-width: $bp-desktop) {
+      padding-left: 36.7%;
     }
   }
 
@@ -50,6 +54,14 @@
       padding-right: 34px;
       padding-left: 0;
     }
+
+    @media (min-width: $bp-desktop) {
+      padding-right: 350px;
+    }
+  }
+
+  @media (min-width: $bp-desktop) {
+    background-image: linear-gradient(red, transparent 1px, transparent 28px, red 29px, transparent 29px, transparent 56px, red 58px, transparent 57px, transparent 87px, red 88px, transparent 88px);
   }
 }
 
