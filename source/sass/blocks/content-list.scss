@@ -24,7 +24,7 @@
   padding-right: 20px;
   padding-left: 20px;
 
-  background-image: linear-gradient(red, transparent 1px, transparent 28px, red 29px, transparent 29px, transparent 56px, red 56px, transparent 57px, transparent 87px, red, transparent 88px);
+  background-image: linear-gradient(#8e8e8e, transparent 1px, transparent 28px, #8e8e8e 29px, transparent 29px, transparent 56px, #8e8e8e 56px, transparent 57px, transparent 87px, #8e8e8e, transparent 88px);
   background-repeat: no-repeat;
   background-size: 100% 88px;
 
@@ -63,7 +63,7 @@
   }
 
   @media (min-width: $bp-desktop) {
-    background-image: linear-gradient(red, transparent 1px, transparent 28px, red 29px, transparent 29px, transparent 56px, red 58px, transparent 57px, transparent 87px, red 88px, transparent 88px);
+    background-image: linear-gradient(#8e8e8e, transparent 1px, transparent 28px, #8e8e8e 29px, transparent 29px, transparent 56px, #8e8e8e 58px, transparent 57px, transparent 87px, #8e8e8e 88px, transparent 88px);
   }
 }
 
