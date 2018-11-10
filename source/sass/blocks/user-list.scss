@@ -1,0 +1,27 @@
+.user-list {
+  @include list-reset;
+
+  margin-top: 10px;
+
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.user-list__link {
+  position: relative;
+  display: block;
+  max-width: 100px;
+  margin-left: 5px;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 40px;
+
+  border: 1px solid #707070;
+}
+
+.user-list__item {
+  position: relative;
+}
