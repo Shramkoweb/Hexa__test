@@ -1,8 +1,37 @@
 .content-list {
   @include list-reset;
+  position: relative;
 
   @media (min-width: $bp-tablet) {
     display: flex;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+
+      width: 100%;
+      height: 28px;
+
+      border-top: 1px solid #8e8e8e;
+      border-bottom: 1px solid #8e8e8e;
+
+      animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 58px;
+
+      width: 100%;
+      height: 28px;
+
+      border-top: 1px solid #8e8e8e;
+      border-bottom: 1px solid #8e8e8e;
+
+      animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    }
   }
 }
 
@@ -20,18 +49,48 @@
 
 
 .content-list__item {
+  position: relative;
+
   margin-bottom: 85px;
-  padding-right: 20px;
-  padding-left: 20px;
 
-  background-image: linear-gradient(red 0, red 1px, transparent 1px, transparent 29px, red 29px, red 30px, transparent 30px, transparent 58px, red 58px, red 59px, transparent 59px, transparent 87px, red 87px, red 88px);
-  background-repeat: no-repeat;
-  background-size: 100% 88px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
 
-  animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    width: 100%;
+    height: 28px;
+
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+
+    animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 58px;
+
+    width: 100%;
+    height: 28px;
+
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+
+    animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
 
   @media (min-width: $bp-tablet) {
     flex-grow: 1;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
   }
 
   &:first-child .content-list__title {
@@ -74,24 +133,22 @@
 
 @keyframes fade-in {
   0% {
-    background-image: none;
-    background-size: 0;
+    opacity: 0;
   }
 
   25% {
-    background-image: none;
-    background-size: 25% 88px;
+    opacity: 0.25;
   }
 
   50% {
-    background-size: 50% 88px;
+    opacity: 0.5;
   }
 
   75% {
-    background-size: 75% 88px;
+    opacity: 0.75;
   }
 
   100% {
-    background-size: 100% 88px;
+    opacity: 1;
   }
 }
