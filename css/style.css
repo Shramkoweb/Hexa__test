@@ -442,15 +442,40 @@ img {
     .content__title {
       padding-left: 36.7%; } }
 
+.content__inner {
+  padding-left: 20px;
+  padding-right: 20px; }
+
 .content-list {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  position: relative; }
   @media (min-width: 1366px) {
     .content-list {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex; }
+      .content-list::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 28px;
+        border-top: 1px solid #8e8e8e;
+        border-bottom: 1px solid #8e8e8e;
+        -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+                animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+      .content-list::after {
+        content: "";
+        position: absolute;
+        top: 58px;
+        width: 100%;
+        height: 28px;
+        border-top: 1px solid #8e8e8e;
+        border-bottom: 1px solid #8e8e8e;
+        -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+                animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both; } }
 
 .content-list__title {
   max-width: 155px;
@@ -463,19 +488,37 @@ img {
   color: #262423; }
 
 .content-list__item {
-  margin-bottom: 85px;
-  padding-right: 20px;
-  padding-left: 20px;
-  background-image: linear-gradient(#8e8e8e, transparent 1px, transparent 28px, #8e8e8e 29px, transparent 29px, transparent 56px, #8e8e8e 56px, transparent 57px, transparent 87px, #8e8e8e, transparent 88px);
-  background-repeat: no-repeat;
-  background-size: 100% 88px;
-  -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-          animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+  position: relative;
+  margin-bottom: 85px; }
+  .content-list__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 28px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+            animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+  .content-list__item::after {
+    content: "";
+    position: absolute;
+    top: 58px;
+    width: 100%;
+    height: 28px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+            animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
   @media (min-width: 1366px) {
     .content-list__item {
       -webkit-box-flex: 1;
           -ms-flex-positive: 1;
-              flex-grow: 1; } }
+              flex-grow: 1; }
+      .content-list__item::after {
+        display: none; }
+      .content-list__item::before {
+        display: none; } }
   .content-list__item:first-child .content-list__title {
     max-width: 170px;
     margin-bottom: 52px; }
@@ -494,9 +537,6 @@ img {
   @media (min-width: 1920px) {
     .content-list__item:last-child {
       padding-right: 350px; } }
-  @media (min-width: 1920px) {
-    .content-list__item {
-      background-image: linear-gradient(#8e8e8e, transparent 1px, transparent 28px, #8e8e8e 29px, transparent 29px, transparent 56px, #8e8e8e 58px, transparent 57px, transparent 87px, #8e8e8e 88px, transparent 88px); } }
 
 .content-list__text {
   max-width: 255px;
@@ -507,28 +547,24 @@ img {
 
 @-webkit-keyframes fade-in {
   0% {
-    background-image: none;
-    background-size: 0; }
+    opacity: 0; }
   25% {
-    background-image: none;
-    background-size: 25% 88px; }
+    opacity: 0.25; }
   50% {
-    background-size: 50% 88px; }
+    opacity: 0.5; }
   75% {
-    background-size: 75% 88px; }
+    opacity: 0.75; }
   100% {
-    background-size: 100% 88px; } }
+    opacity: 1; } }
 
 @keyframes fade-in {
   0% {
-    background-image: none;
-    background-size: 0; }
+    opacity: 0; }
   25% {
-    background-image: none;
-    background-size: 25% 88px; }
+    opacity: 0.25; }
   50% {
-    background-size: 50% 88px; }
+    opacity: 0.5; }
   75% {
-    background-size: 75% 88px; }
+    opacity: 0.75; }
   100% {
-    background-size: 100% 88px; } }
+    opacity: 1; } }
